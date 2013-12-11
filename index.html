@@ -31,33 +31,56 @@
         <hr>
 
         <section id="main_content">
-          <h3>
-<a name="xcbwin" class="anchor" href="#xcbwin"><span class="octicon octicon-link"></span></a>Xcbwin</h3>
+          <h1>
+<a name="xcbwin" class="anchor" href="#xcbwin"><span class="octicon octicon-link"></span></a>Xcbwin</h1>
 
-<p>The Xcbwin class is written for the Computational Physics Lecture given at the University of Wuerzburg (Germany). It provides rudimental and fast methods to produce simple graphical outputs.
-To be a usefull tool for studens that are new to C++ the usage of the Xcbwin-class is very uncomplicated.</p>
+<p><strong>Xcbwin - a simple C++ class for graphical outputs using XCB.</strong></p>
+
+<p>Xcbwin is a lightweight class that provides rudimental and fast methods to produce simple graphical outputs. The Xcbwin class is written for the "Computational Physics" lecture given at the University of Wuerzburg (Germany). Hence it is designed to be easy to use even by students, that are new to C++. </p>
 
 <p>Currently the class provides methods to:</p>
 
 <ul>
-<li>Draw Lines, Points and Rectangles</li>
-<li>Change the color</li>
-<li>Handle keyboard events</li>
+<li> Draw Lines, Points and Rectangles</li>
+<li> Change the color</li>
+<li> Handle keyboard events</li>
 </ul><p>The Xcbwin-class is based on the <a href="http://www.physik.uni-wuerzburg.de/%7Ehinrichsen/teaching/CP/Material/Quelltexte/xwindows">Xwindow-class</a> that was written using Xlib. 
-Xcbwin is designed to be downwardly compatible to the Xwindow-class, but uses <a href="http://xcb.freedesktop.org/">XCB</a> (X protocol C-language Binding) which is designed to be a replacement for Xlib.</p>
+Xcbwin is designed to be downwardly compatible to the Xwindow-class, but uses <a href="http://xcb.freedesktop.org/">XCB</a> (X protocol C-language Binding) which is intended to be a replacement for Xlib in the future.</p>
 
-<h3>
-<a name="current-development" class="anchor" href="#current-development"><span class="octicon octicon-link"></span></a>Current Development</h3>
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>Xcbwin is in a early phase of developement, although the basic methods seem to work quite reasonably.  </p>
+<p>It's easy and almost self-explanatory how to use Xcbwin:</p>
 
-<h3>
-<a name="contributions" class="anchor" href="#contributions"><span class="octicon octicon-link"></span></a>Contributions</h3>
+<div class="highlight highlight-C++"><pre><span class="cp">#include "xcbwin.h"</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
-<p>Contributions are always welcome!</p>
+<span class="n">Xcbwin</span> <span class="n">Window</span><span class="p">;</span>
+<span class="n">Window</span><span class="p">.</span><span class="n">Open</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span> <span class="c1">//Opens a Window of size 400x400</span>
+<span class="n">Window</span><span class="p">.</span><span class="n">Black</span><span class="p">();</span> <span class="c1">//Sets the drawing-color to black</span>
+<span class="n">Window</span><span class="p">.</span><span class="n">DrawRectangle</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">);</span> <span class="c1">//Draws a Rectangle</span>
+<span class="n">Window</span><span class="p">.</span><span class="n">Wait</span><span class="p">();</span> <span class="c1">// Waits for a keypress-event</span>
+<span class="n">Window</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span> <span class="c1">//Closes the Window</span>
 
-<h3>
-<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h3>
+<span class="p">}</span>
+
+</pre></div>
+
+<p>For a better example look at the "demo" folder.</p>
+
+<h2>
+<a name="contributions" class="anchor" href="#contributions"><span class="octicon octicon-link"></span></a>Contributions</h2>
+
+<p>If you have some good ideas or suggestions how to improve the Xcbwin class please do not hesitate to fork the project or get in touch. 
+Currently the official Xcb-documentation is sometimes not very helpful. Hence a lot of the code was written by "try and error" and there are many flaws that need to be corrected. So even if you just have criticism please get in touch :-) .</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Xcblib is published under the MIT license. See the LICENSE file for more info.</p>
+
+<h2>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
 
 <p>If you have any trouble using this class, feel free to contact the author <a href="https://github.com/jofalk" class="user-mention">@jofalk</a>.</p>
         </section>
